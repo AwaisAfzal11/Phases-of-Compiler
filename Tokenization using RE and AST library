@@ -1,0 +1,27 @@
+#MODULE 1:
+
+#This will import RE library
+import re
+
+#Input expression
+expression = 'a + (b*c)'
+
+print("The output of the token will be: ")
+
+# Spliting the expression into tokens simuntaneously!
+tokens = re.findall(r'\d+|[a-zA-Z]+|[^\w\s]', expression)
+#All the tokens will be printed.
+print(tokens)
+
+
+#Module 2
+#Importing AST
+import ast  
+  # INPUT EXPRESSION
+expression = '6 + 8 - 12 ' 
+print("The output of the code is:") 
+code = ast.parse(expression, mode='eval')  
+  
+print(eval(compile(code, '', mode='eval')))
+# OUTPUT CODE 
+print(ast.dump(code)) 
